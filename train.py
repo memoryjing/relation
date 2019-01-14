@@ -14,8 +14,8 @@ from tensorflow.contrib import learn
 
 # Data loading params
 tf.flags.DEFINE_float("dev_sample_percentage", .1, "Percentage of the training data to use for validation")
-tf.flags.DEFINE_string("positive_data_file", "C:/Users/Administrator/Desktop/ChEMPROT/chemprot_training/train.embed", "Data source for the positive data.")
-tf.flags.DEFINE_string("negative_data_file", "C:/Users/Administrator/Desktop/ChEMPROT/chemprot_training/negativeIn.embed", "Data source for the negative data.")
+tf.flags.DEFINE_string("positive_data_file", "data/ChEMPROT/chemprot_training/train.embed", "Data source for the positive data.")
+tf.flags.DEFINE_string("negative_data_file", "data/ChEMPROT/chemprot_training/negativeIn.embed", "Data source for the negative data.")
 
 # Model Hyperparameters
 tf.flags.DEFINE_integer("embedding_dim", 128, "Dimensionality of character embedding (default: 128)")
@@ -50,7 +50,8 @@ def preprocess():
     # Load data
     print("Loading data...")
     x_text, x_pos1,x_pos2,y = data_helpers.load_data_and_labels(FLAGS.positive_data_file, FLAGS.negative_data_file)
-
+    print("======")
+    print(x_text)
     # Build word vocabulary
     max_document_length = max([len(x.split(" ")) for x in x_text])
     vocab_processor = learn.preprocessing.VocabularyProcessor(max_document_length)

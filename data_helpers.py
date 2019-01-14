@@ -3,13 +3,10 @@ import numpy as np
 import re
 import itertools
 from collections import Counter
-from data_helper import Constants,helpFunction
+from src.data_helper import Constants,helpFunction
+
+
 CLASS_NUMS=11
-CHAR_TO_INT={"1 ":1,"2 ":2,"3 ":3,"4 ":4,"5 ":5,"6 ":6,"7 ":7,\
-             "8 ":8,"9 ":9,"10":10}
-
-
-    
 
 def clean_str(string):
     """
@@ -33,35 +30,23 @@ def clean_str(string):
 
 # create y_one_hot according to class number
 def create_one_hot(num):
-    one_hot=[]
-    for i in range(CLASS_NUMS):
-        if i==num:
-            one_hot.append(1)
-        else:
-            one_hot.append(0)
+    one_hot=[0]*CLASS_NUMS
+    one_hot[num]=1
     return one_hot
-        
+
+# CPR:3	 bbbbb1 Tomudex eeeee1  treatment resulted in the decrease in p27(kip1) expression, with an increase in cyclin E and cdk2 protein expression and  bbbbb2 kinase eeeee2  activities 24 h after a 2-h exposure#
 #generate x_text and y_one_hot from list text
-def split_x_text_and_create_y_one_hot(x_text_temp):
+def split_x_text_and_create_y_one_hot(original_x):
     x_text=[]
     x_pos1=[]
     x_pos2=[]
     y_one_hots=[]
-    for item in x_text_temp:
-        #generate labels one hot vector
-        #y_begin_position=item.find(":")+1
-        y_chars=item[4:6] 
-        print(y_chars)
-        if y_chars=="0 ":
-            continue
-        y_int=int(y_chars.strip())-1
-        y_one_hot=create_one_hot(y_int)
+    for x in original_x:
+        y_chars=re.search('\d+',x)
+        y_one_hot=create_one_hot(int(y_chars.group().strip())-1)
         y_one_hots.append(y_one_hot)
-        
         #generate x information
-        x_begin_position=item.find("\t")+1
-        x_str=item[x_begin_position:]
-        print(x_str)
+        x_str=x.split('\t')[-1]
         text,pos1,pos2=helpFunction.create_xtext_and_pos(x_str)
         x_text.append(text)
         x_pos1.append(pos1)
@@ -81,11 +66,22 @@ def load_data_and_labels(positive_data_file, negative_data_file):
     negative_examples = [s.strip() for s in negative_examples]
 
     #读进来的原始数据
-    x_text_temp = [clean_str(sent) for sent in positive_examples]+\
-                    [clean_str(sent) for sent in negative_examples]
+    # x_text_temp = [clean_str(sent) for sent in positive_examples]+\
+    #                 [clean_str(sent) for sent in negative_examples]
+    if positive_data_file==negative_data_file:
+        x_text_temp=positive_examples
+    else:
+        x_text_temp=positive_examples+negative_examples
     #generate training sample (x and y)
     x_text,x_pos1,x_pos2,y_one_hots=split_x_text_and_create_y_one_hot(x_text_temp)
     return [x_text,x_pos1,x_pos2,y_one_hots]
+
+def createJsonData(positive_data_file):
+    # Load data from files
+    positive_examples = list(open(positive_data_file, "r", encoding='UTF-8').readlines())
+    x_text, x_pos1, x_pos2, y_one_hots = split_x_text_and_create_y_one_hot(positive_examples)
+
+
 
 
 def batch_iter(data, batch_size, num_epochs, shuffle=True):
@@ -108,14 +104,18 @@ def batch_iter(data, batch_size, num_epochs, shuffle=True):
             yield shuffled_data[start_index:end_index]
 
 if __name__=="__main__":
-    positive_data_file="C:/Users/Administrator/Desktop/ChEMPROT/chemprot_training/train.embed"
-    negative_data_file="C:/Users/Administrator/Desktop/ChEMPROT/chemprot_training/negativeIn.embed"
-    x_text,y_one_hots=load_data_and_labels(positive_data_file, negative_data_file)
+    positive_data_file="data/ChEMPROT/chemprot_training/train.embed"
+    negative_data_file="data/ChEMPROT/chemprot_training/negativeIn.embed"
+    x_text,_,_,y_one_hots=load_data_and_labels(positive_data_file, negative_data_file)
+
     i=1
     for item_x,item_y in zip(x_text,y_one_hots):
+        i=i+1
         print(item_x)
         print(item_y)
-        print()
-        i=i+1
         if i>50:
             break
+
+#     original_x=['CPR:10	 bbbbb1 Tomudex eeeee1  treatment resulted in the decrease in p27(kip1) expression, with an increase in cyclin E and cdk2 protein expression and  bbbbb2 kinase eeeee2  activities 24 h after a 2-h exposure',
+# 'CPR:3	These results suggest that the megabase DNA fragmentation is induced as a consequence of inhibition of thymidylate synthase by  bbbbb1 Tomudex eeeee1  and kilobase DNA fragmentation may correlate with the reduction of p27(kip1) expression and the increase in  bbbbb2 cyclin E eeeee2  and cdk2 kinase activities']
+#     split_x_text_and_create_y_one_hot(original_x)

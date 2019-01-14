@@ -12,6 +12,7 @@ class TextCNN(object):
       embedding_size, pos_vocab_size,pos_embedding_size,filter_sizes, num_filters, l2_reg_lambda=0.0):
 
         # Placeholders for input, output and dropout
+        print('text CNN: pos_vocab_size:{},vocab_size:{}'.format(pos_vocab_size,vocab_size))
         self.input_x = tf.placeholder(tf.int32, [None, sequence_length], name="input_x")
         self.input_pos1 = tf.placeholder(tf.int32, [None, sequence_length], name="input_pos1")
         self.input_pos2 = tf.placeholder(tf.int32, [None, sequence_length], name="input_pos2")
@@ -36,7 +37,10 @@ class TextCNN(object):
                 name="pos_embedding")
             self.embedded_pos1=tf.nn.embedding_lookup(self.pos_embedding,self.input_pos1)
             self.embedded_pos2=tf.nn.embedding_lookup(self.pos_embedding,self.input_pos2)
+            print("text_cnn.py: embedded_pos1::" + str(self.embedded_pos1.shape))
+
             self.embedded_pos=tf.concat(values=[self.embedded_pos1,self.embedded_pos2],axis=2)
+            print("text_cnn.py: embedded_pos::" + str(self.embedded_pos.shape))
         #Concat word and position
         self.embedded_x=tf.concat(values=[self.embedded_chars,self.embedded_pos],axis=2)
         print("text_cnn.py: embedded_x:"+str(self.embedded_x.shape))

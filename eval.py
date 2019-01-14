@@ -9,17 +9,18 @@ import data_helpers
 from text_cnn import TextCNN
 from tensorflow.contrib import learn
 import csv
+from sklearn.metrics import f1_score,accuracy_score
 
 # Parameters
 # ==================================================
 
 # Data Parameters
-tf.flags.DEFINE_string("positive_data_file", "C:/Users/Administrator/Desktop/ChEMPROT/chemprot_test_gs/test.embed", "Data source for the positive data.")
-tf.flags.DEFINE_string("negative_data_file", "C:/Users/Administrator/Desktop/ChEMPROT/chemprot_test_gs/negativeIn.embed", "Data source for the negative data.")
+tf.flags.DEFINE_string("positive_data_file", "data/ChEMPROT/chemprot_test_gs/test.embed", "Data source for the positive data.")
+tf.flags.DEFINE_string("negative_data_file", "data/ChEMPROT/chemprot_test_gs/negativeIn.embed", "Data source for the negative data.")
 
 # Eval Parameters
 tf.flags.DEFINE_integer("batch_size", 64, "Batch Size (default: 64)")
-tf.flags.DEFINE_string("checkpoint_dir", "./runs/1535600166/checkpoints/", "Checkpoint directory from training run")
+tf.flags.DEFINE_string("checkpoint_dir", "./runs/1545206525/checkpoints/", "Checkpoint directory from training run")
 tf.flags.DEFINE_boolean("eval_train", True, "Evaluate on all training data")
 
 # Misc Parameters
@@ -28,7 +29,7 @@ tf.flags.DEFINE_boolean("log_device_placement", False, "Log placement of ops on 
 
 
 FLAGS = tf.flags.FLAGS
-FLAGS._parse_flags()
+FLAGS.flag_values_dict()
 print("\nParameters:")
 for attr, value in sorted(FLAGS.__flags.items()):
     print("{}={}".format(attr.upper(), value))
@@ -36,7 +37,7 @@ print("")
 
 # CHANGE THIS: Load data. Load your own data here
 if FLAGS.eval_train:
-    x_raw,x_pos1,x_pos2,y_test = data_helpers.load_data_and_labels(FLAGS.positive_data_file, FLAGS.negative_data_file)
+    x_raw,x_pos1,x_pos2,y_test = data_helpers.load_data_and_labels(FLAGS.positive_data_file, FLAGS.positive_data_file)
     y_test = np.argmax(y_test, axis=1)
 else:
     x_raw = ["a masterpiece four years in the making", "everything is off."]
@@ -45,20 +46,15 @@ else:
 # Map data into vocabulary
 vocab_path = os.path.join(FLAGS.checkpoint_dir, "..", "vocab")
 vocab_processor = learn.preprocessing.VocabularyProcessor.restore(vocab_path)
+#这里已经是转化为数字的x_test了
 x_test = np.array(list(vocab_processor.transform(x_raw)))
 print("x_test:",str(x_test.shape))
 # Map position into vocabulary
 position_vocab_path=os.path.join(FLAGS.checkpoint_dir,"..","position")
 position_processor=learn.preprocessing.VocabularyProcessor.restore(position_vocab_path)
 x_pos1=np.array(list(position_processor.transform(x_pos1)))
+print("x_pos1:{}".format(x_pos1.shape))
 x_pos2=np.array(list(position_processor.transform(x_pos2)))
-x_pos=np.concatenate((x_pos1,x_pos2),axis=1)
-print("x_pos1",str(x_pos1.shape))
-print("x_pos2",str(x_pos2.shape))
-print("x_pos:",str(x_pos.shape))
-# x_test=np.concatenate((x_test,x_pos),axis=1)
-# print(x_test.shape)
-
 print("\nEvaluating...\n")
 
 # Evaluation
@@ -79,7 +75,7 @@ with graph.as_default():
         input_x = graph.get_operation_by_name("input_x").outputs[0]
         input_pos1=graph.get_operation_by_name("input_pos1").outputs[0]
         input_pos2=graph.get_operation_by_name("input_pos2").outputs[0]
-#         input_y = graph.get_operation_by_name("input_y").outputs[0]
+        input_y = graph.get_operation_by_name("input_y").outputs[0]
         dropout_keep_prob = graph.get_operation_by_name("dropout_keep_prob").outputs[0]
 
         # Tensors we want to evaluate
@@ -87,25 +83,41 @@ with graph.as_default():
 
         # Generate batches for one epoch
 #         batches = data_helpers.batch_iter(list(zip(x_test,x_pos1,x_pos2, y_test)), FLAGS.batch_size, 1, shuffle=False)
-        batches = data_helpers.batch_iter(list(zip(x_test,x_pos1,x_pos2)), FLAGS.batch_size, 1, shuffle=False)
+        batches = data_helpers.batch_iter(list(zip(x_test,x_pos1,x_pos2,y_test)), FLAGS.batch_size, 1, shuffle=False)
 
         # Collect the predictions here
         all_predictions = []
 
         for batch in batches:
-            x_batch,x_pos1_batch,x_pos2_batch = zip(*batch)
+            x_batch,x_pos1_batch,x_pos2_batch,y_test_batch = zip(*batch)
             batch_predictions = sess.run(predictions, {input_x: x_batch,input_pos1:x_pos1_batch,input_pos2:x_pos2_batch,dropout_keep_prob: 1.0})
             print("batch_prediction:",batch_predictions.shape)
             all_predictions = np.concatenate([all_predictions, batch_predictions])
-
+        print("y_test:{}".format(y_test))
+        print("all_prediction:{}".format(all_predictions))
 # Print accuracy if y_test is defined
 if y_test is not None:
     correct_predictions = float(sum(all_predictions == y_test))
     print("Total number of test examples: {}".format(len(y_test)))
+    print("correction_prediction:{}".format(correct_predictions))
+    print("length of y:{}".format(len(y_test)))
     print("Accuracy: {:g}".format(correct_predictions/float(len(y_test))))
 
 # Save the evaluation to a csv
-predictions_human_readable = np.column_stack((np.array(x_raw), all_predictions))
+print("length:{},result:{}".format(len(all_predictions),all_predictions))
+print("length:{},result:{}".format(len(all_predictions),y_test))
+
+f1=f1_score(y_test,all_predictions,average='micro')
+print("f1_score_micro:{}".format(f1))
+f1=f1_score(y_test,all_predictions,average='macro')
+print("f1_score_macro:{}".format(f1))
+f1=f1_score(y_test,all_predictions,average='weighted')
+print("f1_score_weighted:{}".format(f1))
+
+accuracy_s=accuracy_score(y_test,all_predictions)
+print("accuracy_acore:{}".format(accuracy_s))
+
+predictions_human_readable = np.column_stack((np.array(x_raw), all_predictions,y_test))
 out_path = os.path.join(FLAGS.checkpoint_dir, "..", "prediction.csv")
 print("Saving evaluation to {0}".format(out_path))
 with open(out_path, 'w') as f:

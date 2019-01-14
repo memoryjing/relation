@@ -1,22 +1,22 @@
-from data_helper.Constants import *
-sentence="These results suggest that the megabase DNA fragmentation is induced as \
-a consequence of inhibition of thymidylate synthase by  bbbbb1 Tomudex eeeee1  and kilobase DNA fragmentation may \
-correlate with the reduction of p27(kip1) expression and the increase in cyclin E and cdk2  bbbbb2 kinase eeeee2  activities"
+from .Constants import E1_B,E2_B,E1_E,E2_E
+from nltk.tokenize import sent_tokenize,word_tokenize
+sentence="by  bbbbb1 Tomudex eeeee1  and kilobase DNA p27(kip1) cyclin E and cdk2  bbbbb2 kinase eeeee2  activities"
 
 def create_xtext_and_pos(string):    
     x_pos1=[]
-    x_pos2=[]        
-    x_splited=string.replace("  ", " ").strip(".").split(" ")
+    x_pos2=[]
+    x_splited=string.replace("  ", " ").strip(".").strip(" ")
+    word = word_tokenize(x_splited, language='english')
+    x_splited=word
     en1_pos=x_splited.index(E1_B.strip())
     en2_pos=x_splited.index(E2_B.strip())-2
-    
     x_splited.remove(E1_B.strip())
+    x_splited.remove(E1_E.strip())
     x_splited.remove(E2_B.strip())
-    
+    x_splited.remove(E2_E.strip())
     for index,value in enumerate(x_splited):
         x_pos1.append(str(index-en1_pos))
         x_pos2.append(str(index-en2_pos))
-        
     x_text=" ".join(x_splited)
     x_pos1=" ".join(x_pos1)
     x_pos2=" ".join(x_pos2)
@@ -122,4 +122,7 @@ def get_plain_sentence(sentence):
 
 
 if __name__ == '__main__':
-    get_plain_sentence(sentence)
+    x_text, x_pos1, x_pos2=create_xtext_and_pos(sentence)
+    print(x_text)
+    print(x_pos1)
+    print(x_pos2)
