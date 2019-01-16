@@ -15,12 +15,12 @@ from sklearn.metrics import f1_score,accuracy_score
 # ==================================================
 
 # Data Parameters
-tf.flags.DEFINE_string("positive_data_file", "data/ChEMPROT/chemprot_test_gs/test.embed", "Data source for the positive data.")
+tf.flags.DEFINE_string("positive_data_file", "data/ChEMPROT/chemprot_test_gs/test-temp.embed", "Data source for the positive data.")
 tf.flags.DEFINE_string("negative_data_file", "data/ChEMPROT/chemprot_test_gs/negativeIn.embed", "Data source for the negative data.")
 
 # Eval Parameters
 tf.flags.DEFINE_integer("batch_size", 64, "Batch Size (default: 64)")
-tf.flags.DEFINE_string("checkpoint_dir", "./runs/1545206525/checkpoints/", "Checkpoint directory from training run")
+tf.flags.DEFINE_string("checkpoint_dir", "./runs/1547551254/checkpoints/", "Checkpoint directory from training run")
 tf.flags.DEFINE_boolean("eval_train", True, "Evaluate on all training data")
 
 # Misc Parameters
