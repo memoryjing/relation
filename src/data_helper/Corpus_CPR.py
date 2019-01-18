@@ -253,6 +253,8 @@ def read_CPR_corpus(abs_file, entity_file, rel_file=None):
         if rel_splited[0] in entity_map.keys():
             e1_id = rel_splited[4].partition(':')[2]
             e2_id = rel_splited[5].partition(':')[2]
+            if e1_id not in entity_map[pid].keys() or e2_id not in entity_map[pid].keys():
+                continue
             e1 = entity_map[pid][e1_id]
             e2 = entity_map[pid][e2_id]
             e1_begin = int(e1[1])
@@ -304,13 +306,19 @@ if __name__ == '__main__':
     dir ='/Users/lijingjing/Documents/PycharmProjects/relation/data/ChEMPROT/'
     choice=sys.stdin.readline().strip()
     if choice=="test":
-        entity_file = dir + 'chemprot_test_gs/chemprot_test_entities_gs.tsv'
-        abs_file = dir + 'chemprot_test_gs/chemprot_test_abstracts_gs.tsv'
+        # entity_file = dir + 'chemprot_test_gs/chemprot_test_entities_gs.tsv'
+        # abs_file = dir + 'chemprot_test_gs/chemprot_test_abstracts_gs.tsv'
+        # rel_file = dir + 'chemprot_test_gs/chemprot_test_relations_gs.tsv'
+        entity_file = dir + 'chemprot_test_gs/chemprot_test_entities_gs_replaced.tsv'
+        abs_file = dir + 'chemprot_test_gs/chemprot_test_abstracts_gs_replaced.tsv'
         rel_file = dir + 'chemprot_test_gs/chemprot_test_relations_gs.tsv'
-        
+
     else:
-        entity_file = dir + 'chemprot_training/chemprot_training_entities.tsv'
-        abs_file = dir + 'chemprot_training/chemprot_training_abstracts.tsv'
+        # entity_file = dir + 'chemprot_training/chemprot_training_entities.tsv'
+        # abs_file = dir + 'chemprot_training/chemprot_training_abstracts.tsv'
+        # rel_file = dir + 'chemprot_training/chemprot_training_relations.tsv'
+        entity_file = dir + 'chemprot_training/chemprot_training_entities_replaced.tsv'
+        abs_file = dir + 'chemprot_training/chemprot_training_abstracts_replaced.tsv'
         rel_file = dir + 'chemprot_training/chemprot_training_relations.tsv'
     instances = read_CPR_corpus(abs_file, entity_file, rel_file)
     i=0
@@ -324,10 +332,10 @@ if __name__ == '__main__':
         print(instances2[i])  
         i=i+1
     if choice=="test":
-        FileUtil.writeStrLines(dir + 'chemprot_test_gs/test-temp.embed', instances2)
+        FileUtil.writeStrLines(dir + 'chemprot_test_gs/test-replaced.embed', instances2)
         
     else:
-        FileUtil.writeStrLines(dir + 'chemprot_training/train-new.embed', instances2)
+        FileUtil.writeStrLines(dir + 'chemprot_training/train-replaced.embed', instances2)
 
     
         

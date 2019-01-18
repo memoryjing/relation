@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a575c0ff-9aae-41e6-a81e-0fbc7b6126c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data_helper/replace_entity_with_chem_gene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/relation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/relation.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calc.py" beforeDir="false" afterPath="$PROJECT_DIR$/calc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ChEMPROT/chemprot_training/chemprot_training_relations.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/data/ChEMPROT/chemprot_training/chemprot_training_relations.tsv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/eval.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_helper/Corpus_CPR.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_helper/Corpus_CPR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_helper/preProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_helper/preProcess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_helper/negative_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_helper/negative_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_helper/replace_entity_with_chem_gene.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_helper/replace_entity_with_chem_gene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_helper/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_helper/temp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,24 +20,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/relation$Corpus_CPR.coverage" NAME="Corpus_CPR Coverage Results" MODIFIED="1547536752533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/data_helper" />
-    <SUITE FILE_PATH="coverage/relation$replace_entity_with_chem_gene.coverage" NAME="replace_entity_with_chem_gene Coverage Results" MODIFIED="1547610129857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/data_helper" />
-    <SUITE FILE_PATH="coverage/relation$calc.coverage" NAME="calc Coverage Results" MODIFIED="1547601457452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/relation$Corpus_CPR.coverage" NAME="Corpus_CPR Coverage Results" MODIFIED="1547804835840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/data_helper" />
+    <SUITE FILE_PATH="coverage/relation$temp.coverage" NAME="temp Coverage Results" MODIFIED="1547644702222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/data_helper" />
+    <SUITE FILE_PATH="coverage/relation$replace_entity_with_chem_gene.coverage" NAME="replace_entity_with_chem_gene Coverage Results" MODIFIED="1547804802931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/data_helper" />
+    <SUITE FILE_PATH="coverage/relation$calc.coverage" NAME="calc Coverage Results" MODIFIED="1547814831650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/relation$preProcess.coverage" NAME="preProcess Coverage Results" MODIFIED="1547533046491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/data_helper" />
     <SUITE FILE_PATH="coverage/relation$helpFunction.coverage" NAME="helpFunction Coverage Results" MODIFIED="1547464928057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/data_helper" />
-    <SUITE FILE_PATH="coverage/relation$train.coverage" NAME="train Coverage Results" MODIFIED="1547551239968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/relation$eval.coverage" NAME="eval Coverage Results" MODIFIED="1547552491344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/relation$train.coverage" NAME="train Coverage Results" MODIFIED="1547804888408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/relation$eval.coverage" NAME="eval Coverage Results" MODIFIED="1547805669832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DockManager">
-    <window id="1">
+    <window id="2">
       <content type="file-editors">
         <state>
           <leaf>
-            <file pinned="false" current-in-tab="true">
+            <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/chemprot_training_relations.tsv">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="90">
-                    <caret line="5612" column="13" selection-start-line="5612" selection-start-column="13" selection-end-line="5612" selection-end-column="13" />
+                  <state relative-caret-position="309">
+                    <caret line="2266" column="8" selection-start-line="2266" selection-end-line="2266" selection-end-column="8" />
                   </state>
                 </provider>
               </entry>
@@ -43,8 +46,35 @@
             <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/chemprot_training_entities.tsv">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="310">
-                    <caret line="9678" column="13" selection-start-line="9678" selection-start-column="13" selection-end-line="9678" selection-end-column="13" />
+                  <state relative-caret-position="388">
+                    <caret line="2710" column="40" selection-start-line="2710" selection-start-column="40" selection-end-line="2710" selection-end-column="40" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/data/ChEMPROT/evaluation-kit/readme.txt">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="405">
+                    <caret line="24" column="92" selection-start-line="24" selection-start-column="83" selection-end-line="24" selection-end-column="92" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/chemprot_training_abstracts_replaced.tsv">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="206">
+                    <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/train-replaced.embed">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="288">
+                    <caret line="6147" column="20" selection-start-line="6147" selection-start-column="20" selection-end-line="6147" selection-end-column="20" />
                   </state>
                 </provider>
               </entry>
@@ -60,33 +90,40 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="2" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="1" />
-          <entry key="embed" value="8" />
-          <entry key="py" value="14" />
-          <entry key="tsv" value="9" />
+          <entry key="embed" value="13" />
+          <entry key="json" value="2" />
+          <entry key="py" value="27" />
+          <entry key="sh" value="1" />
+          <entry key="tsv" value="28" />
+          <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="18" />
-          <entry key="Python" value="14" />
+          <entry key="Bash" value="1" />
+          <entry key="JSON" value="2" />
+          <entry key="PLAIN_TEXT" value="44" />
+          <entry key="Python" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3669" />
+          <entry key="embed" value="2" />
+          <entry key="py" value="7687" />
           <entry key="tsv" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="3669" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Python" value="7687" />
         </counts>
       </usages-collector>
     </session>
@@ -96,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4994">
-              <caret line="227" column="6" lean-forward="true" selection-start-line="227" selection-start-column="6" selection-end-line="227" selection-end-column="6" />
+            <state relative-caret-position="-1210">
+              <caret line="94" column="41" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
               <folding>
                 <element signature="e#47#70#0" expanded="true" />
               </folding>
@@ -108,8 +145,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2484">
-              <caret line="120" column="35" lean-forward="true" selection-start-line="120" selection-start-column="35" selection-end-line="120" selection-end-column="35" />
+            <state relative-caret-position="368">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#24#47#0" expanded="true" />
               </folding>
@@ -118,24 +155,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/calc.py">
+        <entry file="file://$PROJECT_DIR$/src/data_helper/replace_entity_with_chem_gene.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            <state relative-caret-position="111">
+              <caret line="244" selection-start-line="244" selection-end-line="244" />
               <folding>
-                <element signature="e#0#52#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#1033#1215#0" />
+                <element signature="e#1253#1710#0" />
+                <element signature="e#1749#2127#0" />
+                <element signature="e#4315#4878#0" />
+                <marker date="1547803895519" expanded="true" signature="412:978" ph="..." />
+                <marker date="1547803895519" expanded="true" signature="1012:1017" ph="..." />
+                <marker date="1547803895519" expanded="true" signature="1183:1605" ph="..." />
+                <marker date="1547803895519" expanded="true" signature="2789:2802" ph="..." />
+                <marker date="1547803895519" expanded="true" signature="6883:7153" ph="..." />
+                <marker date="1547803895519" expanded="true" signature="8337:8338" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_helpers.py">
+        <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/train-temp.embed">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="102" column="31" lean-forward="true" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+            <state relative-caret-position="35">
+              <caret line="134" column="53" selection-start-line="134" selection-start-column="53" selection-end-line="134" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/train.embed">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data_helper/negative_case.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="71" column="60" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="60" />
               <folding>
-                <marker date="1547462495646" expanded="true" signature="3020:3236" ph="..." />
+                <element signature="e#24#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -144,8 +209,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data_helper/Corpus_CPR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="308" column="74" lean-forward="true" selection-start-line="308" selection-start-column="8" selection-end-line="308" selection-end-column="74" />
+            <state relative-caret-position="235">
+              <caret line="320" column="22" selection-start-line="320" selection-start-column="22" selection-end-line="320" selection-end-column="22" />
               <folding>
                 <element signature="e#64#73#0" expanded="true" />
               </folding>
@@ -154,52 +219,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/data_helper/replace_entity_with_chem_gene.py">
+        <entry file="file://$PROJECT_DIR$/calc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data_helper/temp.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="17" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_test_gs/test-temp.embed">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="5732" column="14" selection-start-line="5732" selection-start-column="14" selection-end-line="5732" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_test_gs/test.embed">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="4848" column="43" selection-start-line="4848" selection-start-column="43" selection-end-line="4848" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/chemprot_training_abstracts.tsv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="52" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data_helper/preProcess.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#53#0" expanded="true" />
-              </folding>
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -215,25 +247,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>eeeee1</find>
-      <find>was involved in downregulation of p21</find>
-      <find>thought to be constitutive and regulated at the transcriptional</find>
-      <find>nutritional status was assessed by BMI</find>
-      <find>mRNA decreased 56 and 90% when LNCaP</find>
-      <find>estramustine phosphate metabolites perform as</find>
-      <find>resulted in a significant elevation in the level</find>
-      <find>\</find>
-      <find>sentence</find>
-      <find>significant elevation in the levels</find>
-      <find>, treated orally with the P. nigrum extract at a dose of 187.5 and 93.75 mg/kg b.w. daily for 3 months. Levels of brain acetylcholine (Ach), serum and brain acetylcholinesterase (AchE) activity, C-reactive protein (CRP), total nuclear factor</find>
-      <find>activity</find>
-      <find>metabolites modulate the uteroglobin and</find>
-      <find>bromoacetylalprenololmenthane</find>
-      <find>kip1</find>
-      <find>17397529</find>
-      <find>10891536</find>
-      <find>23524316</find>
-      <find>10626836</find>
       <find>17334708</find>
       <find>10047461</find>
       <find>print</find>
@@ -243,6 +256,27 @@
       <find>23232123</find>
       <find>23017392</find>
       <find>23207322</find>
+      <find>1496</find>
+      <find>19228</find>
+      <find>11319232</find>
+      <find>1131</find>
+      <find>11319</find>
+      <find>10626836</find>
+      <find>16357751</find>
+      <find>Arg2:T3616357751</find>
+      <find>ATP-sensitive K(+) (K(ATP)) channel</find>
+      <find>16855</find>
+      <find>18559268</find>
+      <find>23543413</find>
+      <find>14993281</find>
+      <find>14660028</find>
+      <find>23000249</find>
+      <find>22972179</find>
+      <find>10839989</find>
+      <find>122138</find>
+      <find>16855178</find>
+      <find>CHEMICALIN</find>
+      <find>bbbbb1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -255,11 +289,15 @@
         <option value="$PROJECT_DIR$/src/data_helper/helpFunction.py" />
         <option value="$PROJECT_DIR$/src/data_helper/preProcess.py" />
         <option value="$PROJECT_DIR$/data/ChEMPROT/chemprot_training/chemprot_training_relations.tsv" />
-        <option value="$PROJECT_DIR$/src/data_helper/Corpus_CPR.py" />
-        <option value="$PROJECT_DIR$/eval.py" />
-        <option value="$PROJECT_DIR$/train.py" />
-        <option value="$PROJECT_DIR$/calc.py" />
+        <option value="$PROJECT_DIR$/src/data_helper/temp.py" />
+        <option value="$PROJECT_DIR$/src/data_helper/negative_case.py" />
+        <option value="$PROJECT_DIR$/data/ChEMPROT/chemprot_training/chemprot_training_entities_replaced.tsv" />
         <option value="$PROJECT_DIR$/src/data_helper/replace_entity_with_chem_gene.py" />
+        <option value="$PROJECT_DIR$/data/ChEMPROT/chemprot_training/train-replaced.embed" />
+        <option value="$PROJECT_DIR$/src/data_helper/Corpus_CPR.py" />
+        <option value="$PROJECT_DIR$/train.py" />
+        <option value="$PROJECT_DIR$/eval.py" />
+        <option value="$PROJECT_DIR$/calc.py" />
       </list>
     </option>
   </component>
@@ -278,7 +316,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -286,43 +323,11 @@
               <item name="relation" type="b2602c69:ProjectViewProjectNode" />
               <item name="relation" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="relation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="relation" type="462c0819:PsiDirectoryNode" />
-              <item name=".settings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="relation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="relation" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="relation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="relation" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="ChEMPROT" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="relation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="relation" type="462c0819:PsiDirectoryNode" />
-              <item name="runs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="relation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="relation" type="462c0819:PsiDirectoryNode" />
-              <item name="runs" type="462c0819:PsiDirectoryNode" />
-              <item name="1545206525" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="relation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="relation" type="462c0819:PsiDirectoryNode" />
-              <item name="runs" type="462c0819:PsiDirectoryNode" />
-              <item name="1547465647" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,7 +349,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.replace_entity_with_chem_gene">
+  <component name="RunManager" selected="Python.calc">
     <configuration name="Corpus_CPR" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="relation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -456,19 +461,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Corpus_CPR" />
       <item itemvalue="Python.replace_entity_with_chem_gene" />
+      <item itemvalue="Python.Corpus_CPR" />
       <item itemvalue="Python.train" />
       <item itemvalue="Python.eval" />
       <item itemvalue="Python.calc" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.replace_entity_with_chem_gene" />
         <item itemvalue="Python.calc" />
         <item itemvalue="Python.eval" />
         <item itemvalue="Python.train" />
         <item itemvalue="Python.Corpus_CPR" />
+        <item itemvalue="Python.replace_entity_with_chem_gene" />
       </list>
     </recent_temporary>
   </component>
@@ -489,13 +494,13 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21062271" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23443224" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32959184" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23571429" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30204082" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -503,7 +508,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32959184" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -523,6 +528,22 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../ddi_keras-master/ddi/eval.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../ddi_keras-master/ddi/transformer.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/runs/1545206525/prediction.csv">
       <provider selected="true" editor-type-id="text-editor">
@@ -535,9 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -548,16 +566,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data_helper/temp.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/data_helper/helpFunction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -575,13 +587,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_test_gs/train-temp.embed">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_test_gs/train-temp.embed" />
     <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_test_gs/chemprot_test_abstracts_gs.tsv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -589,9 +595,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data_helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2156">
+          <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+          <folding>
+            <marker date="1547462495646" expanded="true" signature="3020:3236" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_test_gs/test-temp.embed">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126104">
+          <caret line="5732" column="14" selection-start-line="5732" selection-start-column="14" selection-end-line="5732" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_test_gs/test.embed">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106656">
+          <caret line="4848" column="43" selection-start-line="4848" selection-start-column="43" selection-end-line="4848" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/data_helper/preProcess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
+        <state relative-caret-position="110">
           <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
@@ -599,34 +629,192 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../ddi_keras-master/ddi/eval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="97" column="21" lean-forward="true" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ddi_keras-master/ddi/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-505">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ddi_keras-master/ddi/pooling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ddi_keras-master/ddi/transformer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#1#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ddi_keras-master/ddi/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ddi_keras-master/log.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ddi_keras-master/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ddi_keras-master/ddi/dataloader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ddi_keras-master/data/train_dataset.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="732">
+          <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_test_gs/chemprot_test_entities_gs.tsv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="432" column="17" selection-start-line="432" selection-start-column="17" selection-end-line="432" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data_helper/temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="317" column="27" lean-forward="true" selection-start-line="317" selection-start-column="27" selection-end-line="317" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/chemprot_training_abstracts.tsv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="52" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="52" />
+        <state relative-caret-position="287">
+          <caret line="838" column="1258" selection-start-line="838" selection-start-column="1223" selection-end-line="838" selection-end-column="1258" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_test_gs/test.embed">
+    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/chemprot_training_entities.tsv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="4848" column="43" selection-start-line="4848" selection-start-column="43" selection-end-line="4848" selection-end-column="43" />
+        <state relative-caret-position="388">
+          <caret line="2710" column="40" selection-start-line="2710" selection-start-column="40" selection-end-line="2710" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_test_gs/test-temp.embed">
+    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/chemprot_training_entities_replaced.tsv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="5732" column="14" selection-start-line="5732" selection-start-column="14" selection-end-line="5732" selection-end-column="14" />
+        <state relative-caret-position="381">
+          <caret line="1737" column="38" selection-start-line="1737" selection-start-column="38" selection-end-line="1737" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/chemprot_training_relations.tsv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="2266" column="8" selection-start-line="2266" selection-end-line="2266" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/evaluation-kit/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="24" column="92" selection-start-line="24" selection-start-column="83" selection-end-line="24" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/chemprot_training_abstracts_replaced.tsv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data_helper/negative_case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="71" column="60" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="60" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data_helper/replace_entity_with_chem_gene.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="244" selection-start-line="244" selection-end-line="244" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#1033#1215#0" />
+            <element signature="e#1253#1710#0" />
+            <element signature="e#1749#2127#0" />
+            <element signature="e#4315#4878#0" />
+            <marker date="1547803895519" expanded="true" signature="412:978" ph="..." />
+            <marker date="1547803895519" expanded="true" signature="1012:1017" ph="..." />
+            <marker date="1547803895519" expanded="true" signature="1183:1605" ph="..." />
+            <marker date="1547803895519" expanded="true" signature="2789:2802" ph="..." />
+            <marker date="1547803895519" expanded="true" signature="6883:7153" ph="..." />
+            <marker date="1547803895519" expanded="true" signature="8337:8338" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data_helper/Corpus_CPR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="320" column="22" selection-start-line="320" selection-start-column="22" selection-end-line="320" selection-end-column="22" />
+          <folding>
+            <element signature="e#64#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/train.embed">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/train-temp.embed">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="134" column="53" selection-start-line="134" selection-start-column="53" selection-end-line="134" selection-end-column="53" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4994">
-          <caret line="227" column="6" lean-forward="true" selection-start-line="227" selection-start-column="6" selection-end-line="227" selection-end-column="6" />
+        <state relative-caret-position="-1210">
+          <caret line="94" column="41" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
           <folding>
             <element signature="e#47#70#0" expanded="true" />
           </folding>
@@ -635,8 +823,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/eval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2484">
-          <caret line="120" column="35" lean-forward="true" selection-start-line="120" selection-start-column="35" selection-end-line="120" selection-end-column="35" />
+        <state relative-caret-position="368">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#24#47#0" expanded="true" />
           </folding>
@@ -645,55 +833,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/calc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="528">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_helpers.py">
+    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/train-replaced.embed">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="102" column="31" lean-forward="true" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
-          <folding>
-            <marker date="1547462495646" expanded="true" signature="3020:3236" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data_helper/Corpus_CPR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="308" column="74" lean-forward="true" selection-start-line="308" selection-start-column="8" selection-end-line="308" selection-end-column="74" />
-          <folding>
-            <element signature="e#64#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/chemprot_training_entities.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="9678" column="13" selection-start-line="9678" selection-start-column="13" selection-end-line="9678" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ChEMPROT/chemprot_training/chemprot_training_relations.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5612" column="13" selection-start-line="5612" selection-start-column="13" selection-end-line="5612" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data_helper/replace_entity_with_chem_gene.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="288">
+          <caret line="6147" column="20" selection-start-line="6147" selection-start-column="20" selection-end-line="6147" selection-end-column="20" />
         </state>
       </provider>
     </entry>

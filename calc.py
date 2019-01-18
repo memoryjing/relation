@@ -6,7 +6,7 @@ import collections
 y_test=[]
 all_predictions=[]
 #data path
-checkpoint_dir="./runs/1547551254/checkpoints/"
+checkpoint_dir="./runs/1547804901/checkpoints/"
 out_path = os.path.join(checkpoint_dir, "..", "prediction.csv")
 #read data from csv
 csv_reader=csv.reader(open(out_path))

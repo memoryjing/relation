@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 import os
-from data_helper.Constants import *
+from Constants import *
 import types
-import data_helper.helpFunction
-from data_helper.helpFunction import get_plain_sentence,create_negative_case,\
+import helpFunction
+from helpFunction import get_plain_sentence,create_negative_case,\
 create_sentence_map,create_negative_cases
 import pprint
-from data_helper import FileUtil
+import FileUtil
 import sys
 
 

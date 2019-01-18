@@ -14,7 +14,7 @@ from tensorflow.contrib import learn
 
 # Data loading params
 tf.flags.DEFINE_float("dev_sample_percentage", .1, "Percentage of the training data to use for validation")
-tf.flags.DEFINE_string("positive_data_file", "data/ChEMPROT/chemprot_training/train-temp.embed", "Data source for the positive data.")
+tf.flags.DEFINE_string("positive_data_file", "data/ChEMPROT/chemprot_training/train-replaced.embed", "Data source for the positive data.")
 tf.flags.DEFINE_string("negative_data_file", "data/ChEMPROT/chemprot_training/negativeIn.embed", "Data source for the negative data.")
 
 # Model Hyperparameters
